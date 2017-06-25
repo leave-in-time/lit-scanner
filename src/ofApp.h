@@ -20,9 +20,9 @@ public:
 
 	#ifdef TARGET_OPENGLES
 	ofxRPiCameraVideoGrabber cam;
+	OMXCameraSettings camSettings;
 	#else
 	ofVideoGrabber cam;
-	OMXCameraSettings camSettings;
 	#endif
 	ofxCv::ObjectFinder finder;
 	ofPath path;

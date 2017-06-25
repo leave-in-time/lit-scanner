@@ -56,10 +56,12 @@ void ofApp::setupGPIOs(){
 
 //--------------------------------------------------------------
 void ofApp::update() {
+	#ifndef TARGET_OPENGLES
 	cam.update();
 	if(cam.isFrameNew()) {
 		finder.update(cam);
 	}
+	#endif
 	char data[10];
 	client.Receive(data, 10);
 	string msg = data;
@@ -88,7 +90,11 @@ void ofApp::update() {
 
 //--------------------------------------------------------------
 void ofApp::draw() {
+	#ifdef TARGET_OPENGLES
+	cam.draw();
+	#else
 	cam.draw(0, 0);
+	#endif
 	if (finder.size() > 0) {
 		if (state == "refused") drawTracker(finder.getObjectSmoothed(0), "ACCÈS REFUSÉ", red);
 		else if (state == "ok") drawTracker(finder.getObjectSmoothed(0), "ACCÈS AUTORISÉ", green);
