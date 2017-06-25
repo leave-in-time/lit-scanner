@@ -1,0 +1,24 @@
+{
+  "name": "lit-scanner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "start": "electron .",
+      "pack": "rm -rf build/* && electron-packager --platform=linux,win32 --out=build ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xseignard/lit-scanner.git"
+  },
+  "author": "Xavier Seignard <xavier.seignard@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xseignard/lit-scanner/issues"
+  },
+  "homepage": "https://github.com/xseignard/lit-scanner#readme",
+  "devDependencies": {
+    "electron": "^1.6.11",
+    "electron-packager": "^8.7.1"
+  }
+}

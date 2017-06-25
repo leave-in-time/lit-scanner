@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>lit-scanner</title>
+		<link href="./css/mui.min.css" rel="stylesheet" type="text/css" />
+		<link href="./css/index.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="mui-appbar">
+			<table width="100%">
+				<tr style="vertical-align:middle;">
+					<td class="mui--appbar-height" align="center"><h1>Leave in time scanner</h1></td>
+				</tr>
+			</table>
+		</div>
+		<div class="mui-container">
+			<h4>Utilisation:</h4>
+			<ul>
+				<li>Idle : joue la vidéo de "repos"</li>
+				<li>KO : joue la webcam et notifie les joueurs du refus d'accès</li>
+				<li>OK : joue la webcam et notifie les joueurs de l'autorisation d'accès</li>
+			</ul>
+			<div class="mui-textfield">
+				<button id="idle" class="mui-btn mui-btn--raised mui-btn--accent">Idle</button>
+				<button id="ko" class="mui-btn mui-btn--raised mui-btn--accent">KO</button>
+				<button id="ok" class="mui-btn mui-btn--raised mui-btn--accent">OK</button>
+			</div>
+			<div class="current-text">
+				<strong>État actuel: </strong>
+				<span id="current"></span>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+	(function() {
+		function refreshCSS() {
+			var sheets = [].slice.call(document.getElementsByTagName('link'));
+			var head = document.getElementsByTagName('head')[0];
+			for (var i = 0; i < sheets.length; ++i) {
+				var elem = sheets[i];
+				head.removeChild(elem);
+				var rel = elem.rel;
+				if (
+					(elem.href && typeof rel != 'string') ||
+					rel.length == 0 ||
+					rel.toLowerCase() == 'stylesheet'
+				) {
+					var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+					elem.href =
+						url +
+						(url.indexOf('?') >= 0 ? '&' : '?') +
+						'_cacheOverride=' +
+						new Date().valueOf();
+				}
+				head.appendChild(elem);
+			}
+		}
+		var protocol = window.location.protocol === 'http:' ? 'ws://' : 'ws://';
+		var address = protocol + '127.0.0.1:3000' + '/ws';
+		var socket = new WebSocket(address);
+		socket.onmessage = function(msg) {
+			if (msg.data == 'reload') window.location.reload();
+			else if (msg.data == 'refreshcss') refreshCSS();
+		};
+		console.log('Live reload enabled.');
+	})();
+}
+// ]]>
+</script>
+	<script src="./js/mui.min.js"></script>
+	<script>require('./js/renderer.js');</script>
+</html>
