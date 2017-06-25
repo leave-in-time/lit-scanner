@@ -16,7 +16,15 @@ void ofApp::setup() {
 	// camera and opencv settings
 	finder.setup("haarcascade_frontalface_default.xml");
 	finder.setPreset(ObjectFinder::Fast);
+	#ifdef TARGET_OPENGLES
+	camSettings.width = 1920;
+	camSettings.height = 1080;
+	camSettings.enableTexture = true;
+	camSettings.doRecording = false;
+	cam.setup(camSettings);
+	#else
 	cam.setup(800, 600);
+	#endif
 	// udp settings
 	client.Create();
 	client.Bind(8888);

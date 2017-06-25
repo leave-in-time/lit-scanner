@@ -1,2 +1,3 @@
 ofxNetwork
 ofxCv
+ofxRPiCameraVideoGrabber
