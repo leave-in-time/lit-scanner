@@ -36,8 +36,6 @@ void ofApp::setup() {
 //--------------------------------------------------------------
 #ifdef TARGET_OPENGLES
 void ofApp::setupGPIOs(){
-	previousButtonState = true;
-	currentButtonState = true;
 	// setup wiring pi
 	if(wiringPiSetup() == -1){
 		ofLogNotice(__func__) << "Error on wiringPi setup";
