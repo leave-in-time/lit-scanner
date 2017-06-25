@@ -1,0 +1,30 @@
+#!/bin/bash
+# /etc/init.d/lit-scanner
+
+### BEGIN INIT INFO
+# Provides:          lit-scanner
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Starts moving lit-scanner app
+# Description:       This service is used to start lit-scanner app
+### END INIT INFO
+
+
+case "$1" in
+	start)
+		echo "Starting lit-scanner"
+		/home/pi/lit-scanner/bin/lit-scanner
+		;;
+	stop)
+		echo "Stopping lit-scanner"
+		killall lit-scanner
+		;;
+	*)
+		echo "Usage: /etc/init.d/lit-scanner start|stop"
+		exit 1
+		;;
+esac
+
+exit 0

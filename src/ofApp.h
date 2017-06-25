@@ -5,7 +5,7 @@
 #include "ofxNetwork.h"
 #ifdef TARGET_OPENGLES
 #include "wiringPi.h"
-#include "ofxRPiCameraVideoGrabber.h"
+#include "ofxCvPiCam.h"
 #endif
 
 class ofApp : public ofBaseApp {
@@ -19,8 +19,7 @@ public:
 	void drawTracker(ofRectangle rect, string text, ofColor color);
 
 	#ifdef TARGET_OPENGLES
-	ofxRPiCameraVideoGrabber cam;
-	OMXCameraSettings camSettings;
+	ofxCvPiCam cam;
 	#else
 	ofVideoGrabber cam;
 	#endif

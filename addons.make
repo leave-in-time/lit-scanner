@@ -1,3 +1,3 @@
 ofxNetwork
 ofxCv
-ofxRPiCameraVideoGrabber
+ofxCvPiCam

@@ -8,20 +8,18 @@ static const ofColor red = ofColor::fromHex(0xff0000);
 static const ofColor green = ofColor::fromHex(0x00ff00);
 static const ofColor white = ofColor::fromHex(0xffffff);
 
+Mat frame;
 
 //--------------------------------------------------------------
 void ofApp::setup() {
 	ofSetVerticalSync(true);
-	ofSetFrameRate(60);
+	ofSetFrameRate(30);
+	ofHideCursor();
 	// camera and opencv settings
 	finder.setup("haarcascade_frontalface_default.xml");
 	finder.setPreset(ObjectFinder::Fast);
 	#ifdef TARGET_OPENGLES
-	camSettings.width = 1920;
-	camSettings.height = 1080;
-	camSettings.enableTexture = true;
-	camSettings.doRecording = false;
-	cam.setup(camSettings);
+	cam.setup(800, 600, true);
 	#else
 	cam.setup(800, 600);
 	#endif
@@ -56,11 +54,12 @@ void ofApp::setupGPIOs(){
 
 //--------------------------------------------------------------
 void ofApp::update() {
-	#ifndef TARGET_OPENGLES
+	#ifdef TARGET_OPENGLES
+	frame = cam.grab();
+	if (!frame.empty()) finder.update(frame);
+	#else
 	cam.update();
-	if(cam.isFrameNew()) {
-		finder.update(cam);
-	}
+	if (cam.isFrameNew()) finder.update(cam);
 	#endif
 	char data[10];
 	client.Receive(data, 10);
@@ -91,7 +90,7 @@ void ofApp::update() {
 //--------------------------------------------------------------
 void ofApp::draw() {
 	#ifdef TARGET_OPENGLES
-	cam.draw();
+	if (!frame.empty()) drawMat(frame, 0, 0);
 	#else
 	cam.draw(0, 0);
 	#endif
@@ -103,11 +102,10 @@ void ofApp::draw() {
 
 //--------------------------------------------------------------
 void ofApp::drawTracker(ofRectangle rect, string text, ofColor color) {
-	float top = rect.getTop();
 	float scale = .85 * rect.width / font.stringWidth(text);
 	ofSetColor(color);
 	ofPushMatrix();
-		ofTranslate(rect.x, rect.y);
+		ofTranslate(rect.x, rect.y -10);
 		ofScale(scale, scale);
 		font.drawString(text, 0, 0);
 	ofPopMatrix();
@@ -130,5 +128,4 @@ void ofApp::drawTracker(ofRectangle rect, string text, ofColor color) {
 	path.rectangle(rect);
 	path.draw();
 	ofSetColor(white);
-
 }
