@@ -31,7 +31,7 @@ void ofApp::setup() {
 	client.Bind(8888);
 	client.SetNonBlocking(true);
 	// misc
-	state = "idle";
+	state = "off";
 	shouldDisplayMessage = true;
 	ofTrueTypeFont::setGlobalDpi(72);
 	font.load("VT323-Regular.ttf", 60, true, true);
