@@ -1,3 +1,4 @@
 ofxNetwork
 ofxCv
 ofxCvPiCam
+ofxOMXPlayer

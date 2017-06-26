@@ -9,6 +9,7 @@ static const ofColor green = ofColor::fromHex(0x00ff00);
 static const ofColor white = ofColor::fromHex(0xffffff);
 
 Mat frame;
+string videoPath = ofToDataPath("/home/pi/idle.mp4", true);
 
 //--------------------------------------------------------------
 void ofApp::setup() {
@@ -23,12 +24,15 @@ void ofApp::setup() {
 	#else
 	cam.setup(800, 600);
 	#endif
+	// video settings
+	omxPlayer.loadMovie(videoPath);
 	// udp settings
 	client.Create();
 	client.Bind(8888);
 	client.SetNonBlocking(true);
 	// misc
 	state = "idle";
+	shouldDisplayMessage = true;
 	ofTrueTypeFont::setGlobalDpi(72);
 	font.load("VT323-Regular.ttf", 60, true, true);
 	font.setLineHeight(68.0);
@@ -54,18 +58,21 @@ void ofApp::setupGPIOs(){
 
 //--------------------------------------------------------------
 void ofApp::update() {
-	#ifdef TARGET_OPENGLES
-	frame = cam.grab();
-	if (!frame.empty()) finder.update(frame);
-	#else
-	cam.update();
-	if (cam.isFrameNew()) finder.update(cam);
-	#endif
+	if (state != "idle") {
+		#ifdef TARGET_OPENGLES
+		frame = cam.grab();
+		if (!frame.empty()) finder.update(frame);
+		#else
+		cam.update();
+		if (cam.isFrameNew()) finder.update(cam);
+		#endif
+	}
 	char data[10];
 	client.Receive(data, 10);
 	string msg = data;
 	if (msg == "0") {
 		state = "idle";
+		omxPlayer.loadMovie(videoPath);
 		#ifdef TARGET_OPENGLES
 		digitalWrite(RELAY_PIN, HIGH);
 		#endif
@@ -89,14 +96,21 @@ void ofApp::update() {
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-	#ifdef TARGET_OPENGLES
-	if (!frame.empty()) drawMat(frame, 0, 0);
-	#else
-	cam.draw(0, 0);
-	#endif
-	if (finder.size() > 0) {
-		if (state == "refused") drawTracker(finder.getObjectSmoothed(0), "ACCÈS REFUSÉ", red);
-		else if (state == "ok") drawTracker(finder.getObjectSmoothed(0), "ACCÈS AUTORISÉ", green);
+	if (state == "idle") {
+		omxPlayer.draw(0, 0, ofGetWidth(), ofGetHeight());
+	}
+	else {
+		#ifdef TARGET_OPENGLES
+		if (!frame.empty()) drawMat(frame, 0, 0);
+		#else
+		cam.draw(0, 0);
+		#endif
+		if (finder.size() > 0) {
+			ofRectangle current = finder.getObjectSmoothed(0);
+			current.scaleFromCenter(1.3);
+			if (state == "refused") drawTracker(current, "ACCÈS REFUSÉ", red);
+			else if (state == "ok") drawTracker(current, "ACCÈS AUTORISÉ", green);
+		}
 	}
 }
 
@@ -107,7 +121,19 @@ void ofApp::drawTracker(ofRectangle rect, string text, ofColor color) {
 	ofPushMatrix();
 		ofTranslate(rect.x, rect.y -10);
 		ofScale(scale, scale);
-		font.drawString(text, 0, 0);
+		if (state == "refused") {
+			int currentTime = ofGetElapsedTimeMillis();
+			if (currentTime - elapsed > INTERVAL) {
+				shouldDisplayMessage = !shouldDisplayMessage;
+				elapsed = currentTime;
+			}
+			if (shouldDisplayMessage) {
+				font.drawString(text, 0, 0);
+			}
+		}
+		else {
+			font.drawString(text, 0, 0);
+		}
 	ofPopMatrix();
 	ofPushMatrix();
 		ofTranslate(rect.x + rect.width + 10, rect.y + rect.height / 2 );

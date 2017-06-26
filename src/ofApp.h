@@ -6,7 +6,10 @@
 #ifdef TARGET_OPENGLES
 #include "wiringPi.h"
 #include "ofxCvPiCam.h"
+#include "ofxOMXPlayer.h"
 #endif
+
+#define INTERVAL 300
 
 class ofApp : public ofBaseApp {
 public:
@@ -20,6 +23,7 @@ public:
 
 	#ifdef TARGET_OPENGLES
 	ofxCvPiCam cam;
+	ofxOMXPlayer omxPlayer;
 	#else
 	ofVideoGrabber cam;
 	#endif
@@ -31,5 +35,7 @@ public:
 	ofTrueTypeFont font;
 
 	string state;
+	uint64_t elapsed;
+	bool shouldDisplayMessage;
 	const static int RELAY_PIN = 7;
 };
