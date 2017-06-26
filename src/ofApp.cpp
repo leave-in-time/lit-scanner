@@ -58,7 +58,7 @@ void ofApp::setupGPIOs(){
 
 //--------------------------------------------------------------
 void ofApp::update() {
-	if (state != "idle") {
+	if (state != "idle" && state != "off") {
 		#ifdef TARGET_OPENGLES
 		frame = cam.grab();
 		if (!frame.empty()) finder.update(frame);
@@ -71,6 +71,13 @@ void ofApp::update() {
 	client.Receive(data, 10);
 	string msg = data;
 	if (msg == "0") {
+		state = "off";
+		#ifdef TARGET_OPENGLES
+		digitalWrite(RELAY_PIN, HIGH);
+		#endif
+		ofLog(OF_LOG_NOTICE, "Relay on");
+	}
+	else if (msg == "1") {
 		state = "idle";
 		omxPlayer.loadMovie(videoPath);
 		#ifdef TARGET_OPENGLES
@@ -78,14 +85,14 @@ void ofApp::update() {
 		#endif
 		ofLog(OF_LOG_NOTICE, "Relay on");
 	}
-	else if (msg == "1") {
+	else if (msg == "2") {
 		state = "refused";
 		#ifdef TARGET_OPENGLES
 		digitalWrite(RELAY_PIN, HIGH);
 		#endif
 		ofLog(OF_LOG_NOTICE, "Relay on");
 	}
-	else if (msg == "2") {
+	else if (msg == "3") {
 		state = "ok";
 		#ifdef TARGET_OPENGLES
 		digitalWrite(RELAY_PIN, LOW);
@@ -96,7 +103,10 @@ void ofApp::update() {
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-	if (state == "idle") {
+	if (state == "off") {
+		ofClear(0);
+	}
+	else if (state == "idle") {
 		omxPlayer.draw(0, 0, ofGetWidth(), ofGetHeight());
 	}
 	else {
