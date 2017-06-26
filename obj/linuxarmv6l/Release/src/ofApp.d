@@ -457,7 +457,88 @@ obj/linuxarmv6l/Release/src/ofApp.o: /home/pi/lit-scanner/src/ofApp.cpp \
  /opt/vc/include/interface/mmal/util/mmal_util.h \
  /opt/vc/include/interface/mmal/util/mmal_util_params.h \
  /opt/vc/include/interface/mmal/util/mmal_default_components.h \
- /opt/vc/include/interface/mmal/util/mmal_connection.h
+ /opt/vc/include/interface/mmal/util/mmal_connection.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/ofxOMXPlayer.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXInitializer.h \
+ /opt/vc/include/IL/OMX_Core.h /opt/vc/include/IL/OMX_Index.h \
+ /opt/vc/include/IL/OMX_Types.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/LIBAV_INCLUDES.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libswresample/swresample.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/frame.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/avutil.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/common.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/attributes.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/macros.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/version.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/avconfig.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/mem.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/error.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/rational.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/mathematics.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/intfloat.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/log.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/pixfmt.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/buffer.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/dict.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/samplefmt.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/samplefmt.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libswresample/version.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/avutil.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavfilter/avfiltergraph.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavfilter/avfilter.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/attributes.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/dict.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/log.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/pixfmt.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/rational.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavfilter/version.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/version.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavfilter/buffersink.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavfilter/buffersrc.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavcodec/avcodec.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/buffer.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/cpu.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/channel_layout.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavcodec/version.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/crc.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/fifo.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavformat/avformat.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavformat/avio.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/common.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavformat/version.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/mem.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/ofxOMXPlayerSettings.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMX_Maps.h \
+ /opt/vc/include/IL/OMX_Component.h /opt/vc/include/IL/OMX_Audio.h \
+ /opt/vc/include/IL/OMX_Core.h /opt/vc/include/IL/OMX_Video.h \
+ /opt/vc/include/IL/OMX_IVCommon.h /opt/vc/include/IL/OMX_Image.h \
+ /opt/vc/include/IL/OMX_Other.h /opt/vc/include/IL/OMX_Index.h \
+ /opt/vc/include/IL/OMX_Image.h /opt/vc/include/IL/OMX_Video.h \
+ /opt/vc/include/IL/OMX_Broadcom.h /opt/vc/include/IL/OMX_Component.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/ofxOMXPlayerListener.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/ofxOMXPlayerEngine.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/libs/openFrameworks/app/ofAppEGLWindow.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXThread.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXClock.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/Component.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/XMemUtils.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/VideoPlayerTextured.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/BaseVideoPlayer.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXReader.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/StreamInfo.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/File.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/BaseVideoDecoder.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/Tunnel.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/SingleLock.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/FilterManager.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/VideoDecoderTextured.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/VideoPlayerDirect.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/VideoDecoderDirect.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXDisplay.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXAudioPlayer.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/PCMRemap.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXAudioDecoder.h \
+ /home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/AudioCodecOMX.h
 
 /home/pi/lit-scanner/src/ofApp.h:
 
@@ -1418,3 +1499,179 @@ obj/linuxarmv6l/Release/src/ofApp.o: /home/pi/lit-scanner/src/ofApp.cpp \
 /opt/vc/include/interface/mmal/util/mmal_default_components.h:
 
 /opt/vc/include/interface/mmal/util/mmal_connection.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/ofxOMXPlayer.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXInitializer.h:
+
+/opt/vc/include/IL/OMX_Core.h:
+
+/opt/vc/include/IL/OMX_Index.h:
+
+/opt/vc/include/IL/OMX_Types.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/LIBAV_INCLUDES.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libswresample/swresample.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/frame.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/avutil.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/common.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/attributes.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/macros.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/version.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/avconfig.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/mem.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/error.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/rational.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/mathematics.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/intfloat.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/log.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/pixfmt.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/buffer.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/dict.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/samplefmt.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/samplefmt.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libswresample/version.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/avutil.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavfilter/avfiltergraph.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavfilter/avfilter.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/attributes.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/dict.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/log.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/pixfmt.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/rational.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavfilter/version.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/version.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavfilter/buffersink.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavfilter/buffersrc.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavcodec/avcodec.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/buffer.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/cpu.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/channel_layout.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavcodec/version.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/crc.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/fifo.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavformat/avformat.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavformat/avio.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/common.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavformat/version.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/libs/linuxarmv6l/ffmpeg/include/libavutil/mem.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/ofxOMXPlayerSettings.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMX_Maps.h:
+
+/opt/vc/include/IL/OMX_Component.h:
+
+/opt/vc/include/IL/OMX_Audio.h:
+
+/opt/vc/include/IL/OMX_Core.h:
+
+/opt/vc/include/IL/OMX_Video.h:
+
+/opt/vc/include/IL/OMX_IVCommon.h:
+
+/opt/vc/include/IL/OMX_Image.h:
+
+/opt/vc/include/IL/OMX_Other.h:
+
+/opt/vc/include/IL/OMX_Index.h:
+
+/opt/vc/include/IL/OMX_Image.h:
+
+/opt/vc/include/IL/OMX_Video.h:
+
+/opt/vc/include/IL/OMX_Broadcom.h:
+
+/opt/vc/include/IL/OMX_Component.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/ofxOMXPlayerListener.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/ofxOMXPlayerEngine.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/libs/openFrameworks/app/ofAppEGLWindow.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXThread.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXClock.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/Component.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/XMemUtils.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/VideoPlayerTextured.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/BaseVideoPlayer.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXReader.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/StreamInfo.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/File.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/BaseVideoDecoder.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/Tunnel.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/SingleLock.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/FilterManager.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/VideoDecoderTextured.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/VideoPlayerDirect.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/VideoDecoderDirect.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXDisplay.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXAudioPlayer.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/PCMRemap.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/OMXAudioDecoder.h:
+
+/home/pi/of_v0.9.8_linuxarmv6l_release/addons/ofxOMXPlayer/src/AudioCodecOMX.h:
