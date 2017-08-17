@@ -35,7 +35,7 @@ app.on('activate', () => {
 
 // messaging stuff
 const client = dgram.createSocket('udp4');
-const host = '192.168.0.197';
+const host = '192.168.2.37';
 const port = 8888;
 
 const sendText = text => {
