@@ -26,6 +26,7 @@ public:
 	ofxOMXPlayer omxPlayer;
 	#else
 	ofVideoGrabber cam;
+	ofVideoPlayer omxPlayer;
 	#endif
 	ofxCv::ObjectFinder finder;
 	ofPath path;

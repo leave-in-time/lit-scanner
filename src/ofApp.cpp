@@ -26,6 +26,7 @@ void ofApp::setup() {
 	#endif
 	// video settings
 	omxPlayer.loadMovie(videoPath);
+	omxPlayer.setPaused(true);
 	// udp settings
 	client.Create();
 	client.Bind(8888);
@@ -67,11 +68,15 @@ void ofApp::update() {
 		if (cam.isFrameNew()) finder.update(cam);
 		#endif
 	}
+	#ifndef TARGET_OPENGLES
+	if (state == "idle") omxPlayer.update();
+	#endif
 	char data[10];
 	client.Receive(data, 10);
 	string msg = data;
 	if (msg == "0") {
 		state = "off";
+		omxPlayer.setPaused(true);
 		#ifdef TARGET_OPENGLES
 		digitalWrite(RELAY_PIN, HIGH);
 		#endif
@@ -80,6 +85,7 @@ void ofApp::update() {
 	else if (msg == "1") {
 		state = "idle";
 		omxPlayer.loadMovie(videoPath);
+		omxPlayer.setPaused(false);
 		#ifdef TARGET_OPENGLES
 		digitalWrite(RELAY_PIN, HIGH);
 		#endif
@@ -87,6 +93,7 @@ void ofApp::update() {
 	}
 	else if (msg == "2") {
 		state = "refused";
+		omxPlayer.setPaused(true);
 		#ifdef TARGET_OPENGLES
 		digitalWrite(RELAY_PIN, HIGH);
 		#endif
@@ -94,9 +101,7 @@ void ofApp::update() {
 	}
 	else if (msg == "3") {
 		state = "ok";
-		#ifdef TARGET_OPENGLES
-		digitalWrite(RELAY_PIN, LOW);
-		#endif
+		omxPlayer.setPaused(true);
 		ofLog(OF_LOG_NOTICE, "Relay off");
 	}
 }
@@ -118,8 +123,13 @@ void ofApp::draw() {
 		if (finder.size() > 0) {
 			ofRectangle current = finder.getObjectSmoothed(0);
 			current.scaleFromCenter(1.3);
-			if (state == "refused") drawTracker(current, "ACCÈS REFUSÉ", red);
-			else if (state == "ok") drawTracker(current, "ACCÈS AUTORISÉ", green);
+			if (state == "refused") drawTracker(current, "IDENTITÉ NON VALIDÉE", red);
+			else if (state == "ok") {
+				#ifdef TARGET_OPENGLES
+				digitalWrite(RELAY_PIN, LOW);
+				#endif
+				drawTracker(current, "ACCÈS AUTORISÉ", green);
+			}
 		}
 	}
 }
